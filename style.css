@@ -1,0 +1,167 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #edf3ff;
+  text-align: center;
+  background: linear-gradient(135deg, #10172b, #202b48, #10172b);
+}
+
+header {
+  padding: 24px 12px 12px;
+}
+
+h1 {
+  color: #70e1ff;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #bdc9e4;
+  line-height: 1.5;
+}
+
+main {
+  width: min(100%, 650px);
+  margin: auto;
+  padding: 12px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 15px 0;
+  font-size: 13px;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+  gap: 2px;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 5px;
+  background: #0b1020;
+  border: 1px solid #506182;
+  border-radius: 10px;
+}
+
+.cell {
+  min-width: 0;
+  border-radius: 2px;
+  background: #e7edf8;
+}
+
+.cell.wall {
+  background: #090d17;
+}
+
+.cell.start {
+  background: #2ecf83;
+}
+
+.cell.goal {
+  background: #ff5364;
+}
+
+.cell.visited {
+  background: #4e9dff;
+}
+
+.cell.path {
+  background: #ffd447;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 15px;
+  color: white;
+  background: #4263c7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #597ce7;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stats div,
+.info {
+  padding: 14px 8px;
+  border: 1px solid #425172;
+  border-radius: 10px;
+  background: #18223a;
+}
+
+.stats strong,
+.stats span {
+  display: block;
+}
+
+.stats strong {
+  color: #70e1ff;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.stats span {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #b9c6df;
+}
+
+.info {
+  margin-top: 18px;
+  padding: 18px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.info h2 {
+  color: #70e1ff;
+}
+
+footer {
+  padding: 20px 10px;
+  color: #a9b6d0;
+  font-size: 12px;
+}
+
+@media (max-width: 400px) {
+  .legend {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .controls button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  }
