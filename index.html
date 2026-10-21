@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Maze Solver</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>🤖 AI Maze Solver</h1>
+    <p>Watch an AI agent find the shortest path through a maze.</p>
+  </header>
+
+  <main>
+    <div class="legend">
+      <span>🟩 Start</span>
+      <span>🟥 Goal</span>
+      <span>⬛ Wall</span>
+      <span>🟦 Visited</span>
+      <span>🟨 Path</span>
+    </div>
+
+    <div id="maze" aria-label="Maze grid"></div>
+
+    <div class="controls">
+      <button id="solveBtn">▶ Solve Maze</button>
+      <button id="newBtn">🔀 New Maze</button>
+      <button id="resetBtn">↺ Reset</button>
+    </div>
+
+    <section class="stats">
+      <div><strong id="visited">0</strong><span>Cells Visited</span></div>
+      <div><strong id="steps">0</strong><span>Path Steps</span></div>
+      <div><strong id="status">Ready</strong><span>Status</span></div>
+    </section>
+
+    <section class="info">
+      <h2>How does it work?</h2>
+      <p>
+        This project uses Breadth-First Search (BFS), an AI search algorithm
+        that explores neighboring cells level by level to find a shortest path
+        in an unweighted maze.
+      </p>
+    </section>
+  </main>
+
+  <footer>Built with HTML, CSS and JavaScript · AI Search Algorithms</footer>
+  <script src="./script.js"></script>
+</body>
+</html>
